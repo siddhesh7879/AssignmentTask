@@ -1,41 +1,85 @@
-# React + Vite
+Project Name: UzOPay
+Description: Payment platform landing page with interactive UI.
+Tech Stack: React, Vite, Tailwind CSS, Framer Motion, Lucide-react, React-icons
+Features:
+- Navbar with dropdown & audio feedback
+- Testimonials carousel
+- Payment Industry section with tabs
+- Button & link click sounds
+- Mobile responsive
+Screenshots: src/assets/screenshots/
+Installation: yarn install / npm install
+Usage: npm run dev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- clone repository : git clone git@github.com:siddhesh7879/AssignmentTask.git
+- cd UZOPAY_ASSIGNMENT
+- npm install
+    # or
+- yarn
+- npm run dev
+    # or
+- yarn dev 
+- Open your browser at http://localhost:5173/ (Vite default).
 
-Currently, two official plugins are available:
+# Notes
+- Audio files (click.mp3, hover.mp3) are located in src/assets/.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- All UI components reside in src/components/.
 
-## React Compiler
+- Tab and carousel data are managed in src/data/testimonial.js.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Audio playback is handled by utility functions in src/utils/playSound.js.
 
-## Expanding the ESLint configuration
+# Folder Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-
-
-
-/////////////////// assignment code ////////////////
-# UzOPay Landing Page (React + Tailwind CSS)
-
-A modern, responsive landing page UI inspired by a fintech payment gateway design.  
-Built using **React**, **Tailwind CSS**, and **Vite** for fast development and scalability.
-
----
-
-## 🚀 Features
-
-- ⚡️ Built with **Vite** (blazing-fast dev environment)
-- 🎨 Styled using **Tailwind CSS**
-- 📱 Fully responsive design (mobile-first)
-- 🧩 Modular React component structure
-- 💡 Reusable button and layout components
-- 🌌 Clean futuristic theme for digital fintech apps
-
----
-
-## 🏗 Folder Structure
+UZOPAY_ASSIGNMENT/
+├─ public/
+│   └─ index.html
+├─ src/
+│   ├─ assets/
+│   │   ├─ Images (backgrounds, cards, Hero, FinanceFeatures)
+│   │   ├─ Audio (click.mp3, hover.mp3)
+│   │   └─ Other graphics
+│   ├─ components/
+│   │   ├─ BizSettleShowcase/
+│   │   │   └─ BizSettleShowcase.jsx
+│   │   ├─ CarouselCard/
+│   │   │   └─ newCardCarousel.jsx
+│   │   ├─ FinanceFeatures/
+│   │   │   ├─ FeatureCard.jsx
+│   │   │   ├─ ReasonsToPartner.jsx
+│   │   │   └─ SectionHeader.jsx
+│   │   ├─ PaymentIndustrySection/
+│   │   │   ├─ PaymentIndustrySection.jsx
+│   │   │   ├─ PayoutService.jsx
+│   │   │   └─ PayoutServiceCentric.jsx
+│   │   ├─ FloatingLabels/
+│   │   │   └─ FloatingLabels.jsx
+│   │   ├─ Footer/
+│   │   │   └─ Footer.jsx
+│   │   ├─ HeroSection/
+│   │   │   ├─ HeroSection.jsx
+│   │   │   ├─ HeroSection_1.jsx
+│   │   │   ├─ HeroText_1.jsx
+│   │   │   └─ HeroVisual_1.jsx
+│   │   └─ HighlightSection/
+│   │       └─ HighlightSection.jsx
+│   │   └─ PaymentExpertiseCarousel/
+│   │       └─ PaymentExpertiseCarousel.jsx
+│   │   └─ Button.jsx
+│   │   └─ Navbar.jsx
+│   ├─ data/
+│   │   └─ testimonial.js
+│   ├─ pages/
+│   │   └─ Home.jsx
+│   ├─ utils/
+│   │   └─ playSound.js
+│   ├─ App.jsx
+│   ├─ main.jsx
+│   └─ index.css
+├─ .gitignore
+├─ package.json
+├─ package-lock.json
+├─ vite.config.js
+└─ README.md
 

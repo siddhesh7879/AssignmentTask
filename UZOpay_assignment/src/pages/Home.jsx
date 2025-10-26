@@ -11,13 +11,18 @@ import Footer from "../components/Footer/Footer";
 import SectionHeader from "../components/FinanceFeatures/SectionHeader";
 import ReasonsToPartner from "../components/FinanceFeatures/ReasonsToPartner";
 import TestimonialCarousel from "../components/CarouselCard/newCardCarousel";
-
 import HeroSection_1 from '../components/Herosection_1/HeroSection_1';
-
+import { useEffect } from "react";
+import loadSound from "../assets/load.mp3";
+import { playSound } from "../utils/playSound";
 
 export default function Home() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    playSound(loadSound, 0.2);
+  }, []);
 
   return (
     <main className="min-h-screen bg-black text-white">

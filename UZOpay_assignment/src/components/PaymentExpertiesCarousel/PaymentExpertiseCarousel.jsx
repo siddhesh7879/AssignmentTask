@@ -1,5 +1,11 @@
 import React, { useRef, useState, useEffect } from 'react';
 import backgroundR from "../../assets/payment_card.png"; // 👈 1. Import your background image
+import UpiPayout from "../../assets/UpiAutopay.png"; // 👈 1. Import your background image
+import ApiBanking from "../../assets/ApiBanking.png"; // 👈 1. Import your background image
+import Payouts from "../../assets/Payouts.png"; // 👈 1. Import your background image
+import BulkPayments from "../../assets/BulkPayments.png"; // 👈 1. Import your background image
+// import { ImVideoCamera } from 'react-icons/im';
+import { img } from 'framer-motion/client';
 
 
 // --- Data for the Carousel Cards ---
@@ -9,29 +15,16 @@ const expertiseData = [
     description: "Automate your payments with UPI Autopay, ensuring timely transactions without manual effort.",
     color: "violet",
     icon: (
-        // Simplified Mobile/Payment Icon
-        <div className="relative w-24 h-40 rounded-xl bg-violet-600/70 p-1">
-            <div className="w-full h-full bg-black rounded-lg p-2 flex items-center justify-center">
-                <div className="w-4 h-4 rounded-full bg-violet-400 animate-pulse"></div>
-            </div>
-            <div className="absolute inset-0 border-4 border-violet-400 rounded-xl pointer-events-none"></div>
-        </div>
+                <img src={UpiPayout} alt="" />
     )
+    
   },
   {
     title: "API Banking",
     description: "Integrate financial services seamlessly into your applications with our robust API banking solutions.",
     color: "teal",
     icon: (
-        // Simplified API/Stack Icon
-        <div className="flex flex-col items-center space-y-2">
-            <div className="w-20 h-5 bg-teal-600/70 rounded-md"></div>
-            <div className="w-24 h-5 bg-teal-600/50 rounded-md"></div>
-            <div className="w-28 h-5 bg-teal-600/30 rounded-md"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl text-teal-300">
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 9l3 3-3 3m5 0h.01M10 17h4a2 2 0 002-2V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-            </div>
-        </div>
+       <img src={ApiBanking} alt="" />
     )
   },
   {
@@ -39,17 +32,7 @@ const expertiseData = [
     description: "Deliver payouts swiftly and securely, ensuring timely disbursement to employees, partners, or clients.",
     color: "emerald",
     icon: (
-        // Simplified Server/Stack Icon
-        <div className="flex flex-col items-center space-y-1">
-            <div className="w-28 h-12 bg-emerald-600/80 rounded-t-lg p-2 relative">
-                <div className="w-3 h-3 rounded-full bg-emerald-300/80 absolute top-2 right-2"></div>
-            </div>
-            <div className="w-28 h-12 bg-emerald-600/60 p-2"></div>
-            <div className="w-28 h-12 bg-emerald-600/40 rounded-b-lg p-2"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl text-emerald-300">
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 0v10"></path></svg>
-            </div>
-        </div>
+        <img src={Payouts} alt="" />
     )
   },
   {
@@ -57,13 +40,8 @@ const expertiseData = [
     description: "Process multiple payments at once, saving time and reducing errors with bulk payment options.",
     color: "cyan",
     icon: (
-        // Simplified Chart/Growth Icon
-        <div className="relative w-28 h-28 flex items-end justify-center">
-            <div className="w-6 h-1/4 bg-cyan-600/80 rounded-t-sm"></div>
-            <div className="w-6 h-2/4 bg-cyan-600/60 rounded-t-sm mx-1"></div>
-            <div className="w-6 h-3/4 bg-cyan-600/40 rounded-t-sm"></div>
-            <div className="absolute inset-0 flex items-center justify-center text-cyan-300/50 text-7xl font-bold">∑</div>
-        </div>
+      
+        <img src={BulkPayments} alt="" />
     )
   },
     {
@@ -86,7 +64,7 @@ const ExpertiseCard = ({ title, description, icon, color }) => (
     // Width classes are defined here for the carousel to function (flex-shrink-0 and w-80/w-96)
     <div className={`
         shrink-0 mx-4 p-6 shadow-2xl transition duration-500 hover:scale-[1.02] 
-        hover:border-${color}-500/50 relative w-[260px] h-[364px]
+        hover:border-${color}-500/50 relative w-[300px] h-[415px]
     `}
     style={{               
         backgroundImage: `url(${backgroundR})`,
@@ -175,10 +153,10 @@ const PaymentExpertiseCarousel = () => {
             >
                 <div className="max-w-7xl mx-auto w-full">
                     {/* Header Section */}
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-16 md:w-1/2 mx-auto">
                         <p className="text-sm uppercase tracking-widest text-gray-400 mb-2">Our Expertise</p>
-                        <h2 className="text-4xl sm:text-5xl font-bold text-gray-100">
-                            Redefining Payment Processing for You
+                        <h2 className="text-4xl sm:text-5xl  text-gray-100 ">
+                            Redefining Payment Processing for You   
                         </h2>
                     </div>
 
@@ -224,7 +202,7 @@ const PaymentExpertiseCarousel = () => {
                         </button>
 
                         {/* Simple Dot Indicators (Simplified logic for navigation status) */}
-                        <div className="flex space-x-2">
+                        {/* <div className="flex space-x-2">
                             {expertiseData.map((_, index) => (
                                 <div 
                                     key={index} 
@@ -234,7 +212,7 @@ const PaymentExpertiseCarousel = () => {
                                     `}
                                 ></div>
                             ))}
-                        </div>
+                        </div> */}
 
                         {/* Right Arrow Button */}
                         <button

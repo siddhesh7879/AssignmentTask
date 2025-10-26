@@ -4,9 +4,9 @@ import HeroVisual from '../Herosection_1/HeroVisual_1'
 
 function HeroSection_1() {
   return (
-    <section className="flex flex-col  md:flex-row justify-between p-8 bg-transparent mt-28 relative  md:left-32">
+    <section className="flex flex-col  md:flex-row  p-8 bg-transparent mt-25 relative gap-37">
       <HeroText />
-      <div className="md:w-1/2"><HeroVisual/></div>
+      <div className="flex-col"><HeroVisual/></div>
     </section>
   )
 }

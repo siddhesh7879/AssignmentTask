@@ -2,7 +2,7 @@ import React from 'react'
 
 function HeroText_1() {
   return (
-    <div className="md:w-2/4 text-white relative  md:left-0 top-3">
+    <div className="flex-col text-white relative  md:left-0 top-3">
       <span className="px-3 py-2 rounded-full bg-slate-900 text-[12px]">Reliable, and Efficient</span>
       <div className="mt-8">
             <h1 className="text-[32px] leading-10 ">Simplify the</h1>

@@ -87,14 +87,14 @@ const PaymentIndustrySection = () => {
                   backgroundRepeat: 'no-repeat',
               }}
     >
-      <div className=" mx-[124px]" 
+      <div className=" md:mx-[124px]" 
 
       >
         
         {/* Top Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 md:w-1/2 mx-auto ">
           <p className="text-sm uppercase tracking-widest text-gray-400 mb-1">Enhancing payments</p>
-          <h1 className="text-3xl sm:text-5xl font-bold text-gray-100">
+          <h1 className="text-3xl sm:text-5xl  text-gray-100 ">
             Powering Payments Across Industries
           </h1>
         </div>
@@ -103,7 +103,7 @@ const PaymentIndustrySection = () => {
         <div className=" rounded-3xl shadow-2xl overflow-hidden backdrop-blur-sm border border-indigo-900/50">
           
           {/* Tab Navigaton */}
-          <div className="flex justify-between items-end border border-gray-700/50 p-2 overflow-x-auto scrollbar-hide mx-16 my-3 rounded-2xl " role="tablist">
+          <div className="flex justify-between items-end border border-gray-700/50 p-2 overflow-x-auto scrollbar-hide md:mx-16 my-3 rounded-2xl " role="tablist">
             {tabData.map((tab) => (
               <TabButton
                 key={tab.id}
@@ -121,7 +121,7 @@ const PaymentIndustrySection = () => {
             
             {/* Left Content Column (Text and Features) */}
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-white leading-tight">
+              <h2 className="text-3xl text-white leading-tight">
                 {activeContent.title}
               </h2>
               <p className="text-gray-300 text-lg">

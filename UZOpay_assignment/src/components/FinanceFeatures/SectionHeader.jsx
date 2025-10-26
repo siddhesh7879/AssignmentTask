@@ -5,7 +5,7 @@ export default function SectionHeader({ subtitle, title }) {
 
     <>
 {/* <div className="flex justify-center w-1/2"></div> */}
-      <div className="text-center w-1/2 m-auto">
+      <div className="text-center md:w-1/2 m-auto">
         <p className="text-sm md:text-base text-gray-400 tracking-wide uppercase ">
           {subtitle}
         </p>

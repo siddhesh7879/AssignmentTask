@@ -1,4 +1,7 @@
 import { useState } from "react";
+import clickSound from "../assets/click.mp3";
+import hoverSound from "../assets/hover.mp3";
+import { playSound } from "../utils/playSound";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false); // mobile menu
@@ -17,8 +20,8 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="flex justify-between items-center px-6  py-4 text-white rounded-full top-2  z-10 absolute bg-transparent border-2 border-cyan-400 w-fit md:text-nowrap md:top-4 left-0 right-0 m-auto">
-      <h3 className="font-bold mr-24 ">UzOPay</h3>
+    <header className="flex justify-between items-center px-6 py-4 text-white rounded-full top-2 z-10 absolute bg-transparent border-2 border-cyan-400 w-fit md:text-nowrap md:top-4 left-0 right-0 m-auto">
+      <h3 className="font-bold mr-24">UzOPay</h3>
 
       {/* Desktop Menu */}
       <nav className="hidden md:flex gap-6 relative">
@@ -27,10 +30,14 @@ export default function Navbar() {
             <div
               key={item.name}
               className="relative group"
-              onMouseEnter={() => setDropdownOpen(true)}
+              onMouseEnter={() => {
+                setDropdownOpen(true);
+                playSound(hoverSound, 0.1); // optional hover sound
+              }}
               onMouseLeave={() => setDropdownOpen(false)}
             >
               <button
+                onClick={() => playSound(clickSound, 0.3)}
                 className="hover:text-blue-400 transition flex items-center gap-1"
               >
                 {item.name} <span>▾</span>
@@ -43,6 +50,7 @@ export default function Navbar() {
                     <a
                       key={subItem}
                       href="#"
+                      onClick={() => playSound(clickSound, 0.3)}
                       className="px-4 py-2 hover:bg-blue-600 transition"
                     >
                       {subItem}
@@ -52,7 +60,12 @@ export default function Navbar() {
               )}
             </div>
           ) : (
-            <a key={item.name} href="#" className="hover:text-blue-400 transition">
+            <a
+              key={item.name}
+              href="#"
+              onClick={() => playSound(clickSound, 0.3)}
+              className="hover:text-blue-400 transition"
+            >
               {item.name}
             </a>
           )
@@ -60,7 +73,13 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile Menu Button */}
-      <button onClick={() => setOpen(!open)} className="md:hidden">
+      <button
+        onClick={() => {
+          setOpen(!open);
+          playSound(clickSound, 0.3);
+        }}
+        className="md:hidden"
+      >
         ☰
       </button>
 
@@ -71,7 +90,10 @@ export default function Navbar() {
             item.dropdown ? (
               <div key={item.name} className="w-full text-center">
                 <button
-                  onClick={() => setDropdownOpen((prev) => !prev)}
+                  onClick={() => {
+                    setDropdownOpen((prev) => !prev);
+                    playSound(clickSound, 0.3);
+                  }}
                   className="text-white flex justify-center w-full py-2 hover:text-blue-400"
                 >
                   {item.name} <span className="ml-1">▾</span>
@@ -82,6 +104,7 @@ export default function Navbar() {
                       <a
                         key={subItem}
                         href="#"
+                        onClick={() => playSound(clickSound, 0.3)}
                         className="py-2 hover:bg-blue-600 transition"
                       >
                         {subItem}
@@ -91,7 +114,12 @@ export default function Navbar() {
                 )}
               </div>
             ) : (
-              <a key={item.name} href="#" className="text-white py-2">
+              <a
+                key={item.name}
+                href="#"
+                onClick={() => playSound(clickSound, 0.3)}
+                className="text-white py-2"
+              >
                 {item.name}
               </a>
             )
