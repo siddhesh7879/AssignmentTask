@@ -103,7 +103,7 @@ const PaymentIndustrySection = () => {
         <div className=" rounded-3xl shadow-2xl overflow-hidden backdrop-blur-sm border border-indigo-900/50">
           
           {/* Tab Navigaton */}
-          <div className="flex justify-between items-end border border-gray-700/50 p-2 overflow-x-auto scrollbar-hide md:mx-16 my-3 rounded-2xl " role="tablist">
+          <div className="flex justify-between items-end border border-gray-700/50 p-2 overflow-x-auto scrollbar-hide mx-3 md:mx-16 my-3 rounded-2xl " role="tablist">
             {tabData.map((tab) => (
               <TabButton
                 key={tab.id}
