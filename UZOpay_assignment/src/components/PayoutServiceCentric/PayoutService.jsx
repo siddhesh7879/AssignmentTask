@@ -4,15 +4,15 @@ import Button from "../Button";
 
 function PayoutService() {
   return (
-
-    <div className="flex min-h-screen text-white font-sans bg-linear-to-r from-[rgb(26,32,54)] via-[rgb(26,32,54)] to-[#19202b] from-30%"
+    <div className="flex min-h-screen text-white font-sans relative"
       style={{
         backgroundImage: `url(${bgPayoutService})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        backgroundPosition: "center right", 
+        backgroundPosition: "center right",
       }}
     >
+      <div className="radial-gradient(ellipse at center, #392b6e 0%, #181322 70%, transparent 100%, absolute, left-0, right-0, top-0, bottom-0)"></div>
 
       <div className="flex-1 px-10 py-16 lg:px-10 lg:py-16 max-w-lg">
         <span className="inline-block px-4 py-1 rounded-full text-sm mb-4 bg-[#22345d] text-[#b0c4f7]">

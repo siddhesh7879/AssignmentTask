@@ -51,7 +51,8 @@ export default function ReasonsToPartner({ title, description, btnText, icon, si
   ];
 
   return (
-    <section className="relative md:py-10 px-6 md:px-12  overflow-hidden"
+    <section className="relative md:py-10 px-6 md:px-12  overflow-hidden bg-[radial-gradient(ellipse_at_center,_#392b6e_0%,_#181322_70%,_transparent_100%)]
+"
       style={{
         backgroundImage: `url(${backgroundR})`,
         backgroundRepeat: 'no-repeat',
