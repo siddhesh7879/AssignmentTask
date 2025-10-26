@@ -18,7 +18,7 @@ function HeroSection() {
       <section className="relative flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 py-10 overflow-visible">
 
         {/* Left content */}
-        <div className="flex-1 space-y-6 max-w-xl text-center md:text-left relative top-15  md:top-24 xl:top-16  md:left-10 lg:left-22 xl:left-10">
+        <div className="flex-1 space-y-6 max-w-xl text-center md:text-left relative top-24 xl:top-16  md:left-10 lg:left-22 xl:left-10">
           <button className="px-4 py-2 border border-blue-400 rounded-full text-sm">
             Pay Smart. Pay Fast
           </button>

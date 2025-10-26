@@ -86,7 +86,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom Bar */}
-        <div className="flex flex-col sm:flex-row justify-between items-center py-6 text-sm">
+        <div className="relative flex flex-col sm:flex-row justify-between items-center py-6 text-sm">
           <p className="text-gray-400 order-2 sm:order-1 mt-4 sm:mt-0">
             &copy; 2025 Uzopay
           </p>
